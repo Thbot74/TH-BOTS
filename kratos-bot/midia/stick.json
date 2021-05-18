@@ -1,0 +1,8 @@
+               case 'comando':
+					if (args.length < 1) return reply(mess.blank)
+					teks = body.slice(7)
+					if (teks.length > 10) return reply('O texto é longo, até 10 caracteres')
+					reply('*Estou fazendo, se der erro tente novamente ✓*')
+					buffer = await getBuffer(`https://ydiching.sirv.com/images%20(1).jpeg?text.0.text=${teks}&text.0.size=50&text.0.color=f4f3f3&text.0.opacity=62&text.0.font.style=italic&text.0.outline.blur=22`)
+					MrG.sendMessage(from, buffer, image, {quoted: mek, caption: 'legenda-da-imagem'})
+					break
